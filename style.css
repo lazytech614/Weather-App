@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --default-background: linear-gradient(#00bfff, #ff4c68, #ef8172);
+    --rain-background: linear-gradient( #050C9C, #3572EF, #3ABEF9);
+    --clear-background: linear-gradient( #E76F51,#F4A261, #E9C46A);
+    --cloudy-background: linear-gradient( #86B6F6,#B4D4FF, #EEF5FF);
+    --mist-background: linear-gradient( #A0937D,#E7D4B5, #F6E6CB);
+    --snow-background: linear-gradient( #0E46A3,#9AC8CD, #E1F7F5);
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    background: var(--default-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: cursive;
+    color: black;
+}
+
+.main{
+    width: max-content;
+}
+
+.main-container{
+    background: var(--default-background);
+    border-radius: 10px;
+    padding: 8px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.683);
+    width: 492px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.show-error .main-container{
+    display: none;
+}
+
+.search-container{
+    height: 64px;
+    width: 464px;
+    background-color: #FFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-right: 16px;
+    background-color: #CAF4FF;
+}
+
+.search-container input{
+    height: 100%;
+    width: 80%;
+    border: none;
+    outline: none;
+    padding-left: 24px;
+    background-color: #CAF4FF;
+}
+
+#search-btn{
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+    border: none;
+    border-radius: 50%;
+    background-color: green;
+    color: #FFFF;
+    cursor: pointer;
+}
+
+#search-btn:hover{
+    background-color: #6eddf8;
+    color: green;
+}
+
+.image-container{
+    width: 464px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    /* background-color: #050C9C; */
+    /* width: 40%; */
+}
+
+.image-container img{
+    width: 60%;
+}
+
+.weather-details{
+    width: 464px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 52px;
+    font-weight: 700;
+}
+
+.weather-box{
+    margin-top: 24px;
+    text-align: center;
+}
+
+#description{
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.humidity-info{
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    align-items: flex-end;
+    margin-top: 16px;
+}
+
+.humidity .text{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.wind-info{
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    align-items: flex-end;
+    margin-top: 16px;
+}
+
+.wind .text{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.info-title{
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.other-details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    padding-inline: 24px;
+}
+
+.sun-visibility-pressure{
+    width: 464px;
+    padding-inline: 24px;
+    margin-top: 16px;
+    font-size: 20px;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.sun{
+    text-align: left;
+}
+
+.visibility-pressure{
+    text-align: right;
+}
+
+.error-message{
+    height: 400px;
+    width: 464px;
+    background: var(--default-background);
+    border-radius: 10px;
+    padding: 8px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.683);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+    text-align: center;
+}
+
+.error-message img{
+    width: 60%;
+}
+
+.show-error .error-message{
+    display: flex;
+}
+
+#try-again{
+    font-size: 16px;
+    color: inherit;
+    background-color: #ff4c68;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+@media(max-width: 768px){
+    .main-container{
+        width: 324px;
+    }
+
+    .error-message{
+        width: 324px;
+    }
+
+    .search-container{
+        width: 100%;
+        height: 48px;
+    }
+
+    #search-btn{
+        height: 32px;
+        width: 32px;
+        font-size: 16px;
+    }
+
+    .weather-details{
+        width: 100%;
+        font-size: 32px;
+    }
+
+    .sun-visibility-pressure{
+        width: 100%;
+        padding-inline: 16px;
+        font-size: 12px;
+    }
+
+    #description{
+        font-size: 16px;
+    }
+
+    .humidity .text{
+        font-size: 16px;
+    }
+
+    .wind .text{
+        font-size: 16px;
+    }
+
+    .info-title{
+        font-size: 20px;
+    }
+
+    .other-details{
+        padding-inline: 16px;
+    }
+}

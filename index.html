@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <main class="main">
+        <div class="main-container">
+            <div class="search-container">
+                <input type="text" placeholder="Search your city here ...">
+                <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="image-container">
+                <img src="./assets/images/404.png" alt="weather-icon">
+            </div>
+            <div class="weather-details">
+                <div class="weather-box">
+                    <p class="temparature"><span id="temparature">0</span>°C
+                    </p>
+                    <p id="description"></p>
+                </div>
+                <div class="other-details">
+                    <div class="humidity">
+                        <div class="humidity-info">
+                            <i class="fa-solid fa-droplet"></i>
+                            <p class="text"><span id="humidity">0</span>%</p>
+                        </div>
+                        <p class="info-title">Humidity</p>
+                    </div>
+                    <div class="wind">
+                        <div class="wind-info">
+                            <i class="fa-solid fa-wind"></i>
+                            <p class="text"><span id="wind-speed">0</span>Km/h</p>
+                        </div>
+                        <p class="info-title">Wind Speed</p>
+                    </div>
+                </div>
+                <div class="sun-visibility-pressure">
+                    <div class="sun">
+                        <p>Sunrise: <span id="sunrise-time"></span></p>
+                        <p>Sunset: <span id="sunset-time"></span></p>
+                    </div>
+                    <div class="visibility-pressure">
+                        <p>Visibility: <span id="visibility">1</span> km</p>
+                        <p>Pressure: <span id="pressure">1</span> mb</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="error-message">
+            <img src="./assets/images/404.png" alt="error-message">
+            <h1>Sorry location not found !</h1>
+            <button id="try-again">Try Again</button>
+        </div>
+    </main>
+</body>
+</html>
